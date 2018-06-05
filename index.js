@@ -83,7 +83,7 @@ module.exports = {
 
         editor.on('change',function () {
             var content = editor.getValue();
-            vm.$emit('input',content);
+            vm.$emit('input',{content: content, sender: 'lib'});
             vm.contentBackup = content;
         });
         if(vm.options)
